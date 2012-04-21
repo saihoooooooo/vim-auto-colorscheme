@@ -34,7 +34,10 @@ if exists('g:auto_colorscheme_config')
     let g:auto_colorscheme_config = {}
 endif
 
-autocmd MyAutoCmd BufEnter * call s:switchColorscheme()
+augroup AutoColorscheme
+    autocmd!
+    autocmd BufEnter * call s:switchColorscheme()
+augroup END
 
 function! s:switchColorscheme()
     let color = ''
