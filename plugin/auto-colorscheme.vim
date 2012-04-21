@@ -29,24 +29,24 @@ let g:loaded_auto_colorscheme = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-let s:switch_colorscheme_default = g:colors_name
-if exists('g:auto_colorscheme_config')
+if !exists('g:auto_colorscheme_config')
     let g:auto_colorscheme_config = {}
 endif
 
 augroup AutoColorscheme
     autocmd!
-    autocmd BufEnter * call s:switchColorscheme()
+    autocmd BufEnter * call s:SwitchColorscheme()
 augroup END
 
-function! s:switchColorscheme()
-    let color = ''
+function! s:SwitchColorscheme()
+    let color = g:auto_colorscheme_default
     for [key, value] in items(g:auto_colorscheme_config)
         if @% =~ key
             let color = value
+            break
         endif
     endfor
-    execute 'colorscheme' color != '' ? color : s:switch_colorscheme_default
+    execute 'colorscheme' color
 endfunction
 
 let &cpo = s:save_cpo
