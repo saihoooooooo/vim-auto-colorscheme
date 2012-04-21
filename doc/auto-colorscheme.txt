@@ -28,7 +28,7 @@ CONTENTS					*auto-colorscheme-contents*
 
 INTRODUCTION			|auto-colorscheme-introduction|
 INTERFACE			|auto-colorscheme-interface|
-CUSTOMIZING			|auto-colorscheme-customizing|
+VARIABLES			|auto-colorscheme-variables|
 CHANGELOG			|auto-colorscheme-changelog|
 
 
@@ -36,7 +36,7 @@ CHANGELOG			|auto-colorscheme-changelog|
 INTRODUCTION					*auto-colorscheme-introduction*
 
 *auto-colorscheme* is a Vim plugin to provide Automatically change the
-colorscheme in the regular expression.
+colorscheme in the regular expression for buffer name.
 
 Requirements:
 - Vim 7.0 or later
@@ -47,8 +47,25 @@ https://github.com/saihoooooooo/vim-auto-colorscheme
 ==============================================================================
 INTERFACE					*auto-colorscheme-interface*
 
+There is no interface. Works with only autocmd of "BufEnter".
+
 ==============================================================================
-CUSTOMIZING					*auto-colorscheme-customizing*
+VARIABLES 					*auto-colorscheme-variables*
+
+g:auto_colorscheme_default
+		Defines a default value when there was not an applicable.
+
+		A Default value is 'default'.
+
+g:auto_colorscheme_config
+		Defines a regular expression to buffer name and colorscheme
+		in dict form.
+>
+    let g:auto_colorscheme_config = {
+    \     '\.vimrc' : 'evening',
+    \     '^\\\\win-file-server\\' : 'desert',
+    \ }
+<
 
 ==============================================================================
 CHANGELOG					*auto-colorscheme-changelog*
@@ -58,3 +75,4 @@ CHANGELOG					*auto-colorscheme-changelog*
 
 ==============================================================================
 vim:tw=78:ts=8:ft=help:norl:fen:fdl=0:fdm=marker:
+

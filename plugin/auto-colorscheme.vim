@@ -29,6 +29,10 @@ let g:loaded_auto_colorscheme = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
+if !exists('g:auto_colorscheme_default')
+    let g:auto_colorscheme_default = 'default'
+endif
+
 if !exists('g:auto_colorscheme_config')
     let g:auto_colorscheme_config = {}
 endif
