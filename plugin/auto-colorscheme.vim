@@ -50,7 +50,9 @@ function! s:SwitchColorscheme()
             break
         endif
     endfor
-    execute 'colorscheme' color
+    if color != g:colors_name
+        execute 'colorscheme' color
+    endif
 endfunction
 
 let &cpo = s:save_cpo
