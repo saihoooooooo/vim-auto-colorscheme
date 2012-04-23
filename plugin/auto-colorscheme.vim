@@ -37,11 +37,6 @@ if !exists('g:auto_colorscheme_config')
     let g:auto_colorscheme_config = {}
 endif
 
-augroup AutoColorscheme
-    autocmd!
-    autocmd BufEnter * call s:SwitchColorscheme()
-augroup END
-
 function! s:SwitchColorscheme()
     let color = g:auto_colorscheme_default
     for [key, value] in items(g:auto_colorscheme_config)
@@ -54,6 +49,8 @@ function! s:SwitchColorscheme()
         execute 'colorscheme' color
     endif
 endfunction
+
+autocmd BufEnter * call s:SwitchColorscheme()
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
