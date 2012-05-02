@@ -8,7 +8,8 @@ setup in your vimrc
 e.g.)
 
     let g:auto_colorscheme_default = 'default'
-    let g:auto_colorscheme_config = {
-    \     '\.vimrc' : 'evening',
-    \     '^\\\\win-file-server\\' : 'desert',
-    \ }
+    let g:auto_colorscheme_config = [
+    \     ['^\\\\win-file-server\\', 'desert'],
+    \     ['^/Users/ore/works/myproject/trunk/', 'blue'],
+    \     ['^/Users/ore/works/myproject/', 'evening'],
+    \ ]
