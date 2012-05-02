@@ -1,5 +1,5 @@
 " auto-colorscheme - Automatically change the colorscheme.
-" Version: 0.0.0
+" Version: 0.0.1
 " Author : saihoooooooo <saihoooooooo@gmail.com>
 " License: So-called MIT/X license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
@@ -34,14 +34,14 @@ if !exists('g:auto_colorscheme_default')
 endif
 
 if !exists('g:auto_colorscheme_config')
-    let g:auto_colorscheme_config = {}
+    let g:auto_colorscheme_config = []
 endif
 
 function! s:SwitchColorscheme()
     let color = g:auto_colorscheme_default
-    for [key, value] in items(g:auto_colorscheme_config)
-        if @% =~ key
-            let color = value
+    for item in g:auto_colorscheme_config
+        if @% =~ item[0]
+            let color = item[1]
             break
         endif
     endfor

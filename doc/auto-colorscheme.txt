@@ -1,6 +1,6 @@
 *auto-colorscheme.txt*	Automatically change the colorscheme.
 
-Version: 0.0.0
+Version: 0.0.1
 Author : saihoooooooo <saihoooooooo@gmail.com>
 License: So-called MIT/X license  {{{
     Permission is hereby granted, free of charge, to any person obtaining
@@ -59,16 +59,21 @@ g:auto_colorscheme_default
 
 g:auto_colorscheme_config
 		Defines a regular expression to buffer name and colorscheme
-		in dict form.
+		in two-dimensional list.
 >
-    let g:auto_colorscheme_config = {
-    \     '\.vimrc' : 'evening',
-    \     '^\\\\win-file-server\\' : 'desert',
-    \ }
+    let g:auto_colorscheme_config = [
+    \     ['^\\\\win-file-server\\', 'desert'],
+    \     ['^/Users/ore/works/myproject/trunk/', 'blue'],
+    \     ['^/Users/ore/works/myproject/', 'evening'],
+    \ ]
 <
 
 ==============================================================================
 CHANGELOG					*auto-colorscheme-changelog*
+
+0.0.1	2012-05-03
+	- Changed to two-dimensional list from dict the format of
+        "g:auto_colorscheme_config".
 
 0.0.0	2012-04-22
 	- Initial version.
