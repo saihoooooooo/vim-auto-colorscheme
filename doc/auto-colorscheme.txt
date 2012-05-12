@@ -1,6 +1,6 @@
 *auto-colorscheme.txt*	Automatically change the colorscheme.
 
-Version: 0.0.1
+Version: 0.0.2
 Author : saihoooooooo <saihoooooooo@gmail.com>
 License: So-called MIT/X license  {{{
     Permission is hereby granted, free of charge, to any person obtaining
@@ -70,6 +70,10 @@ g:auto_colorscheme_config
 
 ==============================================================================
 CHANGELOG					*auto-colorscheme-changelog*
+
+0.0.2	2012-05-12
+	- Added nested to autocmd of "BufEnter" to be able to hook
+        "ColorScheme".
 
 0.0.1	2012-05-03
 	- Changed to two-dimensional list from dict the format of
