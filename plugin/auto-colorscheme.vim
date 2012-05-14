@@ -1,5 +1,5 @@
 " auto-colorscheme - Automatically change the colorscheme.
-" Version: 0.0.2
+" Version: 0.0.3
 " Author : saihoooooooo <saihoooooooo@gmail.com>
 " License: So-called MIT/X license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
@@ -40,7 +40,7 @@ endif
 function! s:SwitchColorscheme()
     let color = g:auto_colorscheme_default
     for item in g:auto_colorscheme_config
-        if @% =~ item[0]
+        if expand('%:p') =~ item[0] || expand('%:p:~') =~ item[0]
             let color = item[1]
             break
         endif

@@ -1,6 +1,6 @@
 *auto-colorscheme.txt*	Automatically change the colorscheme.
 
-Version: 0.0.2
+Version: 0.0.3
 Author : saihoooooooo <saihoooooooo@gmail.com>
 License: So-called MIT/X license  {{{
     Permission is hereby granted, free of charge, to any person obtaining
@@ -36,7 +36,7 @@ CHANGELOG			|auto-colorscheme-changelog|
 INTRODUCTION					*auto-colorscheme-introduction*
 
 *auto-colorscheme* is a Vim plugin to provide Automatically change the
-colorscheme in the regular expression for buffer name.
+colorscheme in regular expression for absolute path.
 
 Requirements:
 - Vim 7.0 or later
@@ -58,7 +58,7 @@ g:auto_colorscheme_default
 		A Default value is 'default'.
 
 g:auto_colorscheme_config
-		Defines a regular expression to buffer name and colorscheme
+		Defines regular expression to buffer name and colorscheme
 		in two-dimensional list.
 >
     let g:auto_colorscheme_config = [
@@ -70,6 +70,10 @@ g:auto_colorscheme_config
 
 ==============================================================================
 CHANGELOG					*auto-colorscheme-changelog*
+
+0.0.3	2012-05-14
+	- Changed the target of regular expression to absolute pass by buffer
+        name.
 
 0.0.2	2012-05-12
 	- Added nested to autocmd of "BufEnter" to be able to hook
