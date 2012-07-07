@@ -45,7 +45,7 @@ function! s:SwitchColorscheme()
             break
         endif
     endfor
-    if color != g:colors_name
+    if !exists('g:colors_name') || color != g:colors_name
         execute 'colorscheme' color
     endif
 endfunction
