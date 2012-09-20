@@ -1,5 +1,5 @@
 " auto-colorscheme - Automatically change the colorscheme.
-" Version: 0.0.3
+" Version: 0.0.4
 " Author : saihoooooooo <saihoooooooo@gmail.com>
 " License: So-called MIT/X license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
@@ -50,7 +50,7 @@ function! s:SwitchColorscheme()
     endif
 endfunction
 
-autocmd BufEnter * nested call s:SwitchColorscheme()
+autocmd BufEnter,WinEnter * nested call s:SwitchColorscheme()
 
 let &cpo = s:save_cpo
 unlet s:save_cpo

@@ -1,6 +1,6 @@
 *auto-colorscheme.txt*	Automatically change the colorscheme.
 
-Version: 0.0.3
+Version: 0.0.4
 Author : saihoooooooo <saihoooooooo@gmail.com>
 License: So-called MIT/X license  {{{
     Permission is hereby granted, free of charge, to any person obtaining
@@ -70,6 +70,9 @@ g:auto_colorscheme_config
 
 ==============================================================================
 CHANGELOG					*auto-colorscheme-changelog*
+
+0.0.4	2012-05-14
+	- Added autocmd event "WinEnter".
 
 0.0.3	2012-05-14
 	- Changed the target of regular expression to absolute pass by buffer
